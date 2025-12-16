@@ -4,8 +4,6 @@ function App() {
   const incrementCount = countStore(s => s.incrementCount)
   const decrementCount = countStore(s => s.decrementCount)
   const resetCount = countStore(s => s.resetCount)
-  const plusCount = countStore(s => s.plusCount)
-  const minusCount = countStore(s => s.minusCount)
 
   return (
     <>
@@ -13,8 +11,6 @@ function App() {
       <button onClick={() => incrementCount()}>+</button>
       <button onClick={() => decrementCount()}>-</button>
       <button onClick={() => resetCount()}>Reset</button>
-      <button onClick={() => plusCount()}>+5</button>
-      <button onClick={() => minusCount()}>-5</button>
     </>
   )
 }
