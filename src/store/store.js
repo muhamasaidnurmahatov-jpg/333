@@ -21,8 +21,18 @@ const countStore = create(persist(devtools(immer((set)=>{
                 state.count = 0
             })
         },
-
-    
+        plusCount: () =>{
+            set(state =>{
+                 if(state.count < 15) state.count += 5
+            })
+        },
+            minusCount: () =>{
+            set(state =>{
+                 if(state.count > 0) state.count -= 5
+                 if(state.count < 0 ) state.count = 0
+            })
+        
+    }
 }}))));
 
 export default countStore;
